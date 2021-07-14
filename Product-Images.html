@@ -1,0 +1,207 @@
+    <!doctype html>
+    <html lang="en">
+
+    <!-- Webpage Properties -->
+    <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Samuel Robinson">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Images</title>
+    
+    <!-- Internal CSS Styles -->
+    <style>
+    *{ /* Apply properties to every element on the webpage */
+            margin: 0px; /* Remove default margins to fit all elements */
+            box-sizing: border-box; /* Measurements include padding and borders */
+            overflow-x: hidden; /* Remove the scrollbar for the x-axis */
+    }
+    body{
+            font-family: Arial, Helvetica, sans-serif;
+    }
+    header{
+            height: 12vh; /* Percentage of viewport height */
+            width: 100vw; /* Percentage of viewport width */
+            margin: auto;
+            padding-left: 32px;
+            font-style: italic;
+            color: #FFFFFF;
+            background-color: #6DAFFE;
+    }
+    header img{
+            float: left; /* The left and right location of an element */
+    }
+    header h1{
+            position: absolute; /* Placed at parent element */
+            left: 20px;
+    }
+    main{
+            height: auto;
+            min-height: calc(100vh - 12vh - 48px); /* Subtract header and footer height */
+            width: 100vw; /* Percentage of viewport width */
+            padding-top: 20px;
+            background-color: #FFFFFF;
+    }
+    #container{
+            height: auto;
+            width: 80%;
+            padding: 16px 24px 24px 24px; /* Top, right, bottom, left */
+            margin: 0px auto 20px auto; /* Top, right, bottom, left */
+            text-align: center;
+            background-color: #DBEDFF;
+    }
+    #container h2{
+            color: #000000;
+            opacity: 60%;
+    }
+    #container h4{
+            color: #000000;
+            opacity: 60%;
+    }    
+    #gallery-container{
+            height: 90%;
+            width: 100%;
+            margin: 16px auto 0px auto; /* Top, right, bottom, left */
+            padding: 16px;
+            background-color: #EDF6FF;
+    }
+    #photo-box{
+            display: inline-block; /* Occupy space within the tag */
+            width: 260px;
+            overflow: hidden; /* Remove any scrollbars */
+            margin: 12px;
+            padding-top: 20px;
+            text-align: justify; /* Fill a div with equal gaps between words */
+            box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.2); /* x, y, blur, spread, (rgba) */
+    }
+    #photo-box p{
+            display: block; /* Start on a new line and fill a div's width */
+            position: relative; /* Placed near its original location */
+            padding: 8px;
+            font-size: 13px;
+            color: #000000;
+            opacity: 60%;
+    }
+    #photo{
+            height: 220px;
+            width: 100%;
+            margin: 0 auto;
+    }
+    #photo img{
+            display: block; /* Start on a new line and fill a div's width */
+            height: 100%;
+            width: 100%;
+            object-fit: contain; /* Shrink the image to keep its aspect ratio */
+    }
+    #number-label{
+            position: absolute; /* Placed at parent element */
+            height: 28px;
+            width: 40px;
+            clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+            /* Shape, (three or more relative percentage points) */
+            margin-top: -20px; /* Reference padding-top from photo-box */
+            text-align: center;
+            background-color: #FE6D6D;;
+    }
+    #number-label h5{
+            /* p tags conflict with photo-box p tags, thus h5 is used instead */
+            line-height: 28px; /* Reference height from number-label */
+            font-size: 14px;
+            font-weight: normal; /* Give the font a standard thickness. */
+            color: #FFFFFF;
+    }
+    footer{
+            width: 100vw; /* Percentage of viewport width */
+            padding: 16px;
+            text-align: center;
+            color: #FFFFFF;
+            background-color: #437FC7;
+    }
+    .verticalAlign{
+            position: relative; /* Placed near its original location */
+            top: 50%; /* Move vertically to the centre of an element */
+            transform: translateY(-50%); /* Compensate for the movement */
+    }
+    @media all and (min-width: 640px) { /* If screen is > 640px resize list-item */
+      .list-item {
+        width: 50%;
+      }
+    }
+    @media all and (min-width: 960px) { /* If screen is > 960px resize list-item */
+      .list-item {
+        width: 33.3%;
+      }
+    }
+    .list{
+            display: flex; /* Start on a new line and fill an element's space */
+            flex-wrap: wrap; /* Move overflowing flex items to a new line */
+    }
+    .list-item{
+            display: flex; /* Start on a new line and fill an element's space */
+            width 100%;
+            padding: 6px;
+    }
+    </style>
+    </head>
+
+    <!-- Webpage Contents -->
+    <body>
+    <header>
+    <!-- Logo design courtesy of wwww.freelogodesign.org -->
+    <img class='verticalAlign' src='Logo.gif' alt='Logo' height=64 width=64>
+    <h1 class='verticalAlign'>Poly Deliver</h1>
+    </header>
+
+    <main>
+    <!-- Generic content box -->
+    <div id='container'>
+    <h2>Video Game Bundle</h2>
+    <h4>Source Webpage: <a href='https://www.amazon.com/best-sellers-video-games/zgbs/videogames'>Amazon (Local)</a></h4>
+
+    <!-- Image gallery -->
+    <div id=gallery-container>
+    <ul class="list">
+    <!-- Product 1 -->
+    <li class="list-item">
+    <div id=photo-box>
+    <div id=number-label><h5>#1</h5></div>
+    <div id=photo><img alt="$10 PlayStation Store Gift Card [Digital Code]" src="https://images-na.ssl-images-amazon.com/images/I/71cCI9QPwYL._AC_UL200_SR200,200_.jpg" height="200" width="200"></div><p><b>$10 PlayStation Store Gift Card [Digital Code]</b></p></div>
+    </li>
+    <!-- Product 2 -->
+    <li class="list-item">
+    <div id=photo-box>
+    <div id=number-label><h5>#2</h5></div>
+    <div id=photo><img alt="$10 Xbox Gift Card [Digital Code]" src="https://images-na.ssl-images-amazon.com/images/I/618mZBoZXNL._AC_UL200_SR200,200_.jpg" height="200" width="200"></div><p><b>$10 Xbox Gift Card [Digital Code]</b></p></div>
+    </li>
+    <!-- Product 3 -->
+    <li class="list-item">
+    <div id=photo-box>
+    <div id=number-label><h5>#3</h5></div>
+    <div id=photo><img alt="$10 Nintendo eShop Gift Card [Digital Code]" src="https://images-na.ssl-images-amazon.com/images/I/71g8qy0R8zL._AC_UL200_SR200,200_.jpg" height="200" width="200"></div><p><b>$10 Nintendo eShop Gift Card [Digital Code]</b></p></div>
+    </li>
+    <!-- Product 4 -->
+    <li class="list-item">
+    <div id=photo-box>
+    <div id=number-label><h5>#4</h5></div>
+    <div id=photo><img alt="Roblox Gift Card - 800 Robux [Online Game Code]" src="https://images-na.ssl-images-amazon.com/images/I/71SfFWK2AUL._AC_UL200_SR200,200_.jpg" height="200" width="200"></div><p><b>Roblox Gift Card - 800 Robux [Online Game Code]</b></p></div>
+    </li>
+    <!-- Product 5 -->
+    <li class="list-item">
+    <div id=photo-box>
+    <div id=number-label><h5>#5</h5></div>
+    <div id=photo><img alt="SanDisk 128GB MicroSDXC UHS-I Memory Card for Nintendo Switch - SDSQXAO-128G-GNCZN" src="https://images-na.ssl-images-amazon.com/images/I/81Nd1T6TeKL._AC_UL200_SR200,200_.jpg" height="200" width="200"></div><p><b>SanDisk 128GB MicroSDXC UHS-I Memory Card for Nintendo Switch - SDSQXAO-128G-GNCZN</b></p></div>
+    </li>
+    </ul>
+    <!-- gallery-container end -->
+    </div>
+    
+    <!-- container end -->
+    </div>
+    </main>
+
+    <footer>
+    <p>&copy; 2020 Samuel Robinson. Images may be subject to copyright.</p>
+    </footer>
+    
+    </body>
+    
+    </html>
